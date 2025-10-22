@@ -21,18 +21,61 @@ Learn how to centrally manage, approve, and deploy Windows updates across a doma
 
 ```powershell
 # Open PowerShell as Administrator
-Install-WindowsFeature -Name UpdateServices, UpdateServices-DB, UpdateServices-RSAT, UpdateServices-UI -IncludeManagementTools
+Install-WindowsFeature -Name UpdateServices-Services, UpdateServices-WidDB -IncludeManagementTools
 ```
-When prompted by the wizard:
-- Choose WSUS Services and Database option.
-- Select your content directory (e.g., D:\WSUS) — ensure at least 30 GB free space.
-- Choose sync schedule: manual or automatic.
+✅ Successfully installed using Windows Internal Database (WID) — avoids SQL conflicts.
+
+---
+
+### 🔹 Step 2 – Run WSUS Post-Install
+
+
+```powershell
+# Open PowerShell as Administrator
+cd "C:\Program Files\Update Services\Tools"
+.\wsusutil.exe postinstall CONTENT_DIR=C:\WSUS
+```
+
+<details> <summary>📸 Click to view screenshot of results</summary>
+<p align="center">
+  ✅ <strong> WSUS Post-Installation Completed Successfully </strong>✅  
+<p align="center">
+<img src="https://i.imgur.com/HUcR3QC.png" width="60%">
+</p>
+</details>
+
+---
+
+### 🔹 Step 3 – Launch WSUS Console
+
+- Open Server Manager → Tools → Windows Server Update Services
+- The Configuration Wizard will start automatically.
+  Select:
+- Upstream Source: Microsoft Update
+- Languages: English
+- Products: Windows 
+- Sync Schedule: Manual
 
 
 <details> <summary>📸 Click to view screenshot of results</summary>
 <p align="center">
-  ✅ <strong>WSUS Configuration Wizard summary screen </strong>✅  
+  ✅ <strong>WSUS Configuration Wizard Summary Screen </strong>✅  
 <p align="center">
-<img src="https://i.imgur.com/pWcfLZx.png" width="60%">
+<img src="https://i.imgur.com/HSmTxUN.png" width="60%">
+</p>
+</details>
+
+---
+
+### 🔹 Step 4 – Synchronize Updates
+
+From the WSUS console:
+- Right-click Synchronizations → Start Synchronization
+
+<details> <summary>📸 Click to view screenshot of results</summary>
+<p align="center">
+  ✅ <strong>Sync Progress Showing “Successfully Completed</strong>✅  
+<p align="center">
+<img src="https://i.imgur.com/HSmTxUN.png" width="60%">
 </p>
 </details>
