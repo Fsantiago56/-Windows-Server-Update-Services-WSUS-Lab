@@ -148,3 +148,21 @@ Updates → All Updates → Unapproved → Approve
 <img src="https://i.imgur.com/OUngoHM.png" width="60%">
 </p>
 </details> 
+
+---
+
+### 🔹 Step 8 – Verify Compliance
+
+Check:
+```
+Reports → Computers → Computer Status Summary
+```
+✅ Client01 should appear and report its update status (Installed / Needed / Failed).
+
+ <details> <summary>📸 Click to view screenshot of results</summary>
+<p align="center">
+  ✅ <strong>WSUS Compliance Report</strong>✅  
+<p align="center">
+<img src="https://i.imgur.com/XAlvAZZ.png" width="60%">
+</p>
+</details> 
