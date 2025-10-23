@@ -166,3 +166,23 @@ Reports → Computers → Computer Status Summary
 <img src="https://i.imgur.com/XAlvAZZ.png" width="60%">
 </p>
 </details> 
+
+---
+
+💡 Skills Gained
+- Windows Server Role Installation & Management
+
+- Active Directory & Group Policy Integration
+
+- WSUS Database Management (WID)
+
+- Centralized Patch Management
+
+- Network Compliance Reporting
+
+---
+
+🧠 Closing Notes
+
+This project showcases a complete enterprise patch-management solution built from scratch inside a virtual environment.
+I installed and configured WSUS, created a domain-linked GPO, and verified client reporting just like a corporate systems administrator would in production.
