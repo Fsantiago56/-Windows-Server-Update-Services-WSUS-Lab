@@ -104,3 +104,47 @@ http://DC01:8530
 <img src="https://i.imgur.com/ZIw5RVZ.png" width="60%">
 </p>
 </details>
+
+---
+
+### 🔹 Step 6 – Apply GPO and Verify on Client01
+
+On Client01:
+
+```powershell
+gpupdate /force
+gpresult /r
+```
+Confirm your GPO (e.g., WSUS_Client_Updates) is listed under “Applied Group Policy Objects.”
+Then force WSUS detection:
+```powershell
+wuauclt /detectnow
+wuauclt /reportnow
+```
+
+<details> <summary>📸 Click to view screenshot of results</summary>
+<p align="center">
+  ✅ <strong>Client01 listed in WSUS Console</strong>✅  
+<p align="center">
+<img src="https://i.imgur.com/QSpGqkl.png" width="60%">
+</p>
+</details>
+
+---
+
+### 🔹 Step 7 – Approve and Deploy Updates
+
+In the WSUS Console:
+```
+Updates → All Updates → Unapproved → Approve
+```
+- Choose your target group (or “All Computers”)
+- Approve for Install
+
+ <details> <summary>📸 Click to view screenshot of results</summary>
+<p align="center">
+  ✅ <strong>Approved Updates List</strong>✅  
+<p align="center">
+<img src="https://i.imgur.com/OUngoHM.png" width="60%">
+</p>
+</details> 
