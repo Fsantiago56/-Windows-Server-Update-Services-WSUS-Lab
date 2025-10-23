@@ -79,3 +79,28 @@ From the WSUS console:
 <img src="https://i.imgur.com/ZDEL0eK.png" width="60%">
 </p>
 </details>
+
+---
+
+### 🔹 Step 5 – Create GPO for WSUS Clients
+
+On DC01:
+1. Open Group Policy Management
+2. Create a new GPO → WSUS_Client_Updates
+3. Navigate to
+```
+Computer Configuration → Policies → Administrative Templates → Windows Components → Windows Update
+```
+4. Configure:
+```
+Specify intranet Microsoft update service location & set both as:
+http://DC01:8530
+```
+
+<details> <summary>📸 Click to view screenshot of results</summary>
+<p align="center">
+  ✅ <strong>GPO WSUS Settings Applied</strong>✅  
+<p align="center">
+<img src="https://i.imgur.com/ZIw5RVZ.png" width="60%">
+</p>
+</details>
