@@ -74,8 +74,8 @@ From the WSUS console:
 
 <details> <summary>📸 Click to view screenshot of results</summary>
 <p align="center">
-  ✅ <strong>Sync Progress Showing “Successfully Completed</strong>✅  
+  ✅ <strong>Sync Progress Showing Successfully Completed</strong>✅  
 <p align="center">
-<img src="https://i.imgur.com/HSmTxUN.png" width="60%">
+<img src="https://i.imgur.com/ZDEL0eK.png" width="60%">
 </p>
 </details>
